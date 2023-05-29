@@ -15,6 +15,7 @@ const stergere = document.querySelector('.stergere')
 const cos = document.querySelector('.cos')
 const sin = document.querySelector('.sin')
 const tan = document.querySelector('.tan')
+const plus_minus = document.querySelector('.plus_minus')
 cif_0.addEventListener('click',(ev)=>{
     input.value += 0;
 })
@@ -73,4 +74,8 @@ sin.addEventListener('click',(ev)=>{
 tan.addEventListener('click',(ev)=>{
     let rez = Math.tan(input.value);
     input.value =rez;
+})
+
+plus_minus.addEventListener('click',(ev)=>{
+    input.value = +input.value * -1;
 })
