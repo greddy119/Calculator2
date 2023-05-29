@@ -16,6 +16,9 @@ const cos = document.querySelector('.cos')
 const sin = document.querySelector('.sin')
 const tan = document.querySelector('.tan')
 const plus_minus = document.querySelector('.plus_minus')
+const put_2 = document.querySelector('.put_2')
+const put_3 = document.querySelector('.put_3')
+const put_10 = document.querySelector('.zece')
 cif_0.addEventListener('click',(ev)=>{
     input.value += 0;
 })
@@ -78,4 +81,20 @@ tan.addEventListener('click',(ev)=>{
 
 plus_minus.addEventListener('click',(ev)=>{
     input.value = +input.value * -1;
+})
+
+put_2.addEventListener('click',(ev)=>{
+    input.value = +input.value * +input.value;
+})
+
+put_3.addEventListener('click',(ev)=>{
+    input.value = +input.value * +input.value * +input.value;
+})
+
+put_10.addEventListener('click',(ev)=>{
+    let rez = 1;
+    for (let i = 0; i < input.value; i++) {
+        rez *= 10
+    }
+    input.value = rez;
 })
