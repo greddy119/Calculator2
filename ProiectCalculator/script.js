@@ -53,13 +53,6 @@ window.addEventListener('keydown',(ev)=>{
     }
 })
 
-plus.addEventListener('click',(ev)=>{
-    let add = plus.textContent;
-    input.value += add;
-})
-egal.addEventListener('click',(ev)=>{
-    input.value
-})
 stergere.addEventListener('click',(ev)=>{
-
+      input.value = '';
 })
