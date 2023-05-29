@@ -98,3 +98,24 @@ put_10.addEventListener('click',(ev)=>{
     }
     input.value = rez;
 })
+
+const comma = () => {
+    let current = input.value;
+    if (!current.includes(".")) {
+        screen.value += ".";
+    }
+}
+
+
+const equal = (value) => {
+    let current = input.value;
+
+    if (value === "=") {
+        let result = eval(current);
+        input.value = result;
+    } else if (value === "C") {
+        input.value = "";
+    } else {
+        input.value += value;
+    }
+}
