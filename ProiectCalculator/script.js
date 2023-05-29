@@ -56,3 +56,5 @@ window.addEventListener('keydown',(ev)=>{
 stergere.addEventListener('click',(ev)=>{
       input.value = '';
 })
+
+
