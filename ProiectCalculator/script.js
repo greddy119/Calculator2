@@ -12,6 +12,9 @@ const input = document.querySelector('.screen')
 const plus = document.querySelector('.plus');
 const egal = document.querySelector('.egal')
 const stergere = document.querySelector('.stergere')
+const cos = document.querySelector('.cos')
+const sin = document.querySelector('.sin')
+const tan = document.querySelector('.tan')
 cif_0.addEventListener('click',(ev)=>{
     input.value += 0;
 })
@@ -55,4 +58,19 @@ window.addEventListener('keydown',(ev)=>{
 
 stergere.addEventListener('click',(ev)=>{
       input.value = '';
+})
+
+cos.addEventListener('click',(ev)=>{
+        let rez = Math.cos(input.value);
+        input.value =rez;
+})
+
+sin.addEventListener('click',(ev)=>{
+    let rez = Math.sin(input.value);
+    input.value =rez;
+})
+
+tan.addEventListener('click',(ev)=>{
+    let rez = Math.tan(input.value);
+    input.value =rez;
 })
