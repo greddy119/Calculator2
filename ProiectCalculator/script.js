@@ -1,17 +1,19 @@
-const cif_0 = document.querySelector('.symbol-zero')
-const cif_1 = document.querySelector('.symbol-unu')
-const cif_2 = document.querySelector('.symbol-doi')
-const cif_3 = document.querySelector('.symbol-trei')
-const cif_4 = document.querySelector('.symbol-patru')
-const cif_5 = document.querySelector('.symbol-cinci')
-const cif_6 = document.querySelector('.symbol-sase')
-const cif_7 = document.querySelector('.symbol-sapte')
-const cif_8 = document.querySelector('.symbol-opt')
-const cif_9 = document.querySelector('.symbol-noua')
+const cif_0 = document.querySelector('.zero')
+const cif_1 = document.querySelector('.unu')
+const cif_2 = document.querySelector('.doi')
+const cif_3 = document.querySelector('.trei')
+const cif_4 = document.querySelector('.patru')
+const cif_5 = document.querySelector('.cinci')
+const cif_6 = document.querySelector('.sase')
+const cif_7 = document.querySelector('.sapte')
+const cif_8 = document.querySelector('.opt')
+const cif_9 = document.querySelector('.noua')
 const input = document.querySelector('.screen')
-
+const plus = document.querySelector('.plus');
+const egal = document.querySelector('.egal')
+const stergere = document.querySelector('.stergere')
 cif_0.addEventListener('click',(ev)=>{
-        input.value += 0;
+    input.value += 0;
 })
 cif_1.addEventListener('click',(ev)=>{
     input.value += 1;
@@ -49,4 +51,15 @@ window.addEventListener('keydown',(ev)=>{
         console.log(rez)
         input.value = rez;
     }
+})
+
+plus.addEventListener('click',(ev)=>{
+    let add = plus.textContent;
+    input.value += add;
+})
+egal.addEventListener('click',(ev)=>{
+    input.value
+})
+stergere.addEventListener('click',(ev)=>{
+
 })
