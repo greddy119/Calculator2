@@ -4,7 +4,13 @@ let result = "0";
 let current_operator;
 let evaluation = [];
 const screen = document.querySelector(".value");
-const keyboard = document.querySelector(".calculator");
+const keyboard = document.querySelector(".calculatort");
+const cos = document.querySelector('[data-value = "cos"]');
+const sin = document.querySelector('[data-value = "sin"]');
+const tan = document.querySelector('[data-value = "tan"]');
+const put_2 = document.querySelector('[data-value = "x2"]');
+const put_3 = document.querySelector('[data-value = "x3"]');
+const put_10 = document.querySelector('[data-value = "10x"]');
 
 keyboard.addEventListener('click', function(e) {
     e.stopImmediatePropagation()
@@ -47,7 +53,8 @@ function AssignNumber(e) {
 
 function AssignOperation(e) {
     current_operator = e.target.getAttribute('data-value');
-    if(current_operator === "%" || current_operator === "+/-" || current_operator === "clear" || current_operator === "=") return Operate();
+    // Exclusive operations that can be performed with one number, in the case of clear it can be executed even when the evaluation array is empty
+    if(current_operator === "%" || current_operator === "+/-"  || current_operator === "clear" || current_operator === "=") return Operate();
     if(evaluation.length === 3) Operate();
     if(evaluation.length === 2) evaluation.pop();
     evaluation.splice(1, 1, current_operator);
@@ -120,7 +127,46 @@ function Render(e) {
         screen.textContent = result;
     }
 
-    evaluation.length === "0"
+    evaluation.length == "0"
         ? clear_button.textContent = 'AC'
         : clear_button.textContent = 'C'
 }
+
+
+
+cos.addEventListener('click',(ev)=>{
+    console.log(screen.textContent)
+    result = Math.cos(+screen.textContent)
+    screen.textContent = result;
+
+})
+
+sin.addEventListener('click',(ev)=>{
+    result = Math.sin(+screen.textContent)
+    screen.textContent = result;
+})
+
+tan.addEventListener('click',(ev)=>{
+    result = Math.tan(+screen.textContent)
+    screen.textContent = result;
+})
+
+
+put_2.addEventListener('click',(ev)=>{
+    result = +screen.textContent * +screen.textContent
+    screen.textContent = result;
+})
+
+put_3.addEventListener('click',(ev)=>{
+    result = +screen.textContent * +screen.textContent * +screen.textContent
+    screen.textContent = result;
+})
+put_10.addEventListener('click',(ev)=>{
+    console.log(screen.textContent)
+    let rez = 1;
+    for (let i = 0; i < screen.textContent; i++) {
+        rez *= 10
+    }
+    result =rez;
+    screen.textContent = result;
+})
