@@ -4,7 +4,7 @@ let result = "0";
 let current_operator;
 let evaluation = [];
 const screen = document.querySelector(".value");
-const keyboard = document.querySelector(".calculatort");
+const keyboard = document.querySelector(".calculator");
 const cos = document.querySelector('[data-value = "cos"]');
 const sin = document.querySelector('[data-value = "sin"]');
 const tan = document.querySelector('[data-value = "tan"]');
