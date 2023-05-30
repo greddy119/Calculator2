@@ -5,6 +5,12 @@ let current_operator;
 let evaluation = [];
 const screen = document.querySelector(".value");
 const keyboard = document.querySelector(".calculatort");
+const cos = document.querySelector('[data-value = "cos"]');
+const sin = document.querySelector('[data-value = "sin"]');
+const tan = document.querySelector('[data-value = "tan"]');
+const put_2 = document.querySelector('[data-value = "x2"]');
+const put_3 = document.querySelector('[data-value = "x3"]');
+const put_10 = document.querySelector('[data-value = "10x"]');
 
 keyboard.addEventListener('click', function(e) {
     e.stopImmediatePropagation()
@@ -125,3 +131,42 @@ function Render(e) {
         ? clear_button.textContent = 'AC'
         : clear_button.textContent = 'C'
 }
+
+
+
+cos.addEventListener('click',(ev)=>{
+    console.log(screen.textContent)
+    result = Math.cos(+screen.textContent)
+    screen.textContent = result;
+
+})
+
+sin.addEventListener('click',(ev)=>{
+    result = Math.sin(+screen.textContent)
+    screen.textContent = result;
+})
+
+tan.addEventListener('click',(ev)=>{
+    result = Math.tan(+screen.textContent)
+    screen.textContent = result;
+})
+
+
+put_2.addEventListener('click',(ev)=>{
+    result = +screen.textContent * +screen.textContent
+    screen.textContent = result;
+})
+
+put_3.addEventListener('click',(ev)=>{
+    result = +screen.textContent * +screen.textContent * +screen.textContent
+    screen.textContent = result;
+})
+put_10.addEventListener('click',(ev)=>{
+    console.log(screen.textContent)
+    let rez = 1;
+    for (let i = 0; i < screen.textContent; i++) {
+        rez *= 10
+    }
+    result =rez;
+    screen.textContent = result;
+})
