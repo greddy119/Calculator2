@@ -6,65 +6,61 @@
 </head>
 <body>
 
-<div class="calculator">
-    <input type="text" class="screen" id="screen" placeholder="0">
-
-    <button class="symbol">(</button>
-    <button class="symbol">)</button>
-    <button class="symbol">mc</button>
-    <button class="symbol">m+</button>
-    <button class="symbol">m-</button>
-    <button class="symbol">mr</button>
-    <button class="symbol stergere">AC</button>
-    <button class="symbol plus_minus">+/-</button>
-    <button class="symbol">%</button>
-    <button class="symbol">/</button>
-
-    <button class="symbol">2<sup>nd</sup></button>
-    <button class="symbol">x<sup>2</sup></button>
-    <button class="symbol">x<sup>3</sup></button>
-    <button class="symbol">x<sup>y</sup></button>
-    <button class="symbol">e<sup>x</sup></button>
-    <button class="symbol zece">10<sup>x</sup></button>
-    <button class="symbol sapte">7</button>
-    <button class="symbol opt">8</button>
-    <button class="symbol noua">9</button>
-    <button class="symbol inmultire">*</button>
-
-    <button class="symbol">1/x</button>
-    <button class="symbol">2√x</button>
-    <button class="symbol">3√x</button>
-    <button class="symbol">y√x</button>
-    <button class="symbol">In</button>
-    <button class="symbol">log <sub>10</sub></button>
-    <button class="symbol patru">4</button>
-    <button class="symbol cinci">5</button>
-    <button class="symbol sase">6</button>
-    <button class="symbol minus">-</button>
-
-    <button class="symbol">x!</button>
-    <button class="symbol sin">sin</button>
-    <button class="symbol cos">cos</button>
-    <button class="symbol tan">tan</button>
-    <button class="symbol">e</button>
-    <button class="symbol">EE</button>
-    <button class="symbol unu">1</button>
-    <button class="symbol doi">2</button>
-    <button class="symbol trei">3</button>
-    <button class="symbol plus">+</button>
-
-    <button class="symbol">Rad</button>
-    <button class="symbol">sinh</button>
-    <button class="symbol">cosh</button>
-    <button class="symbol">tanh</button>
-    <button class="symbol">&#960;</button>
-    <button class="symbol">Rand</button>
-    <button class="symbol zero">0</button>
-    <button class="symbol virgula">,</button>
-    <button class="symbol egal">=</button>
-
-
+<div class="calculatort">
+    <div class="value">0</div>
+    <div class="buttons-container">
+        <div class="button" data-button-type="operator" data-value="(">(</div>
+        <div class="button" data-button-type="operator" data-value=")">)</div>
+        <div class="button" data-button-type="operator" data-value="mc">mc</div>
+        <div class="button" data-button-type="operator" data-value="m+">m+</div>
+        <div class="button" data-button-type="operator" data-value="m-">m-</div>
+        <div class="button" data-button-type="operator" data-value="mr">mr</div>
+        <div class="button function ac delete" data-button-type="operator" data-value="clear">AC</div>
+        <div class="button function pm" data-button-type="operator" data-value="+/-">+/-</div>
+        <div class="button function percent" data-button-type="operator" data-value="%">%</div>
+        <div class="button operator division" data-button-type="operator" data-value="/">÷</div>
+        <div class="button" data-button-type="operator" data-value="2nd"><p>2<sup style="font-size: 25px">nd</sup></p></div>
+        <div class="button x2" data-button-type="operator" data-value="x2"><p>x<sup style="font-size: 25px">2</sup></p></div>
+        <div class="button x3" data-button-type="operator" data-value="x3"><p>x<sup style="font-size: 25px">3</sup></p></div>
+        <div class="button" data-button-type="operator" data-value="xy"><p>x<sup style="font-size: 25px">y</sup></p></div>
+        <div class="button" data-button-type="operator" data-value="ex"><p>e<sup style="font-size: 25px">x</sup></p></div>
+        <div class="button x10" data-button-type="operator" data-value="10x"><p>10<sup style="font-size: 25px">x</sup></p></div>
+        <div class="button number-7" data-button-type="digit" data-value="7">7</div>
+        <div class="button number-8" data-button-type="digit" data-value="8">8</div>
+        <div class="button number-9" data-button-type="digit" data-value="9">9</div>
+        <div class="button operator multiplication" data-button-type="operator" data-value="*">x</div>
+        <div class="button" data-button-type="operator" data-value="1/x"><p><sup style="font-size: 25px">1</sup>/<sub style="font-size: 25px">x</sub></p></div>
+        <div class="button" data-button-type="operator" data-value="2radx"><p><sup style="font-size: 25px">2</sup>√x</div>
+        <div class="button" data-button-type="operator" data-value="3radx"><p><sup style="font-size: 25px">3</sup>√x</div>
+        <div class="button" data-button-type="operator" data-value="yradx"><p><sup style="font-size: 25px">y</sup>√x</div>
+        <div class="button" data-button-type="operator" data-value="ln">ln</div>
+        <div class="button" data-button-type="operator" data-value="log10"><p>log<sub style="font-size: 25px">10</sub></p></div>
+        <div class="button number-4" data-button-type="digit" data-value="4">4</div>
+        <div class="button number-5" data-button-type="digit" data-value="5">5</div>
+        <div class="button number-6" data-button-type="digit" data-value="6">6</div>
+        <div class="button operator subtraction" data-button-type="operator" data-value="-">-</div>
+        <div class="button" data-button-type="operator" data-value="x!">x!</div>
+        <div class="button sin" data-button-type="operator" data-value="sin">sin</div>
+        <div class="button cos" data-button-type="operator" data-value="cos">cos</div>
+        <div class="button tan" data-button-type="operator" data-value="tan">tan</div>
+        <div class="button" data-button-type="operator" data-value="e">e</div>
+        <div class="button" data-button-type="operator" data-value="EE">EE</div>
+        <div class="button number-1" data-button-type="digit" data-value="1">1</div>
+        <div class="button number-2" data-button-type="digit" data-value="2">2</div>
+        <div class="button number-3" data-button-type="digit" data-value="3">3</div>
+        <div class="button operator addition" data-button-type="operator" data-value="+">+</div>
+        <div class="button" data-button-type="operator" data-value="Rad">Rad</div>
+        <div class="button" data-button-type="operator" data-value="sinh">sinh</div>
+        <div class="button" data-button-type="operator" data-value="cosh">cosh</div>
+        <div class="button" data-button-type="operator" data-value="tanh">tanh</div>
+        <div class="button" data-button-type="operator" data-value="pi">&#960;</div>
+        <div class="button" data-button-type="operator" data-value="Rand">Rand</div>
+        <div class="button number-0" data-button-type="digit" data-value="0">0</div>
+        <div class="button decimal" data-button-type="digit" data-value=",">,</div>
+        <div class="button operator equal" data-button-type="operator" data-value="=">=</div>
+    </div>
 </div>
+
 
 
 <script src="script.js"></script>
