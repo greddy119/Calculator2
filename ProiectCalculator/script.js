@@ -79,3 +79,4 @@ tan.addEventListener('click',(ev)=>{
 plus_minus.addEventListener('click',(ev)=>{
     input.value = +input.value * -1;
 })
+
