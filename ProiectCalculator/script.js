@@ -47,7 +47,6 @@ function AssignNumber(e) {
 
 function AssignOperation(e) {
     current_operator = e.target.getAttribute('data-value');
-    // Exclusive operations that can be performed with one number, in the case of clear it can be executed even when the evaluation array is empty
     if(current_operator === "%" || current_operator === "+/-" || current_operator === "clear" || current_operator === "=") return Operate();
     if(evaluation.length === 3) Operate();
     if(evaluation.length === 2) evaluation.pop();
